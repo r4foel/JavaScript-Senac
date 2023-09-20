@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores Logicos</title>
+    <script>
+//         Crie um programa que solicite o nome do usuário, o percentual de presenças e sua nota.
+//         Se as presenças for maior ou igual a 75 % E a nota for maior que 7, 5 -- "Aprovado"
+//         Caso contrario-- "Reprovado"
+//         Imprima as informações na pagina da seguinte maneira
+//         Aluno:  nome do aluno
+//         Presenças:  % de presenças
+//         Nota:  valor da nota
+//         Situação: Aprovado ou reprovado
+// Utilize os operadores logicos e crie o habito de deixar o console aberto para depuração.
+
+        let aluno = prompt("Digite o nome do aluno: ", '');
+        let presenca = prompt("Digite o percentual de presenças NÃO USE %: ", '');
+        let nota = prompt("Digite a nota entre 0 e 10: ", '');
+
+
+        // && é a ssegunda condição a ser verificada em caso dde verdadeiro
+        // obs: as duas condições devem ser verdadeiras
+        // || "ou " avalia uma das condições e se identificar o valor torno verdadeiro
+        if (presenca >= 75 || nota >= 7.5) {
+            document.write('<b>Aluno(a):</b> ' + aluno);
+            document.write('<br><b>Presenças:</b> ' + presenca + '%');
+            document.write('<br><b>Nota:</b> ' + nota);
+            document.write('<br><b>Situação:</b> Aprovado');
+        } else {
+            document.write('<b>Aluno(a):</b> ' + aluno);
+            document.write('<br><b>Presenças:</b> ' + presenca + '%');
+            document.write('<br><b>Nota:</b> ' + nota);
+            document.write('<br><b>Situação:</b> Reprovado');
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
