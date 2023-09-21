@@ -1,0 +1,78 @@
+<script>
+    let fruta = prompt('Digite o nome de uma fruta: (utilize letras minusculas)', '');
+
+    let fruitImg;
+    let fruintEng;
+
+
+    switch (fruta) {
+
+        case 'abacaxi':
+            fruitImg = '<img src=imagens/abacaxi.jpg width=200px>';
+            fruintEng = 'Pineapple';
+            break;
+        case 'banana':
+            fruitImg = '<img src=imagens/banana.jpg width=200px>';
+            fruintEng = 'Banana';
+            break;
+        case 'caqui':
+            fruitImg = '<img src=imagens/caqui.jpg width=200px>';
+            fruintEng = 'Persimmon';
+            break;
+        case 'coco':
+            fruitImg = '<img src=imagens/coco.jpg width=200px>';
+            fruintEng = 'Coconut';
+            break;
+        case 'goiaba':
+            fruitImg = '<img src=imagens/goiaba.jpg width=200px>';
+            fruintEng = 'Guava';
+            break;
+        case 'laranja':
+            fruitImg = '<img src=imagens/laranja.jpg width=200px>';
+            fruintEng = 'Orange';
+            break;
+        case 'maça':
+            fruitImg = '<img src=imagens/maca.jpg width=200px>';
+            fruintEng = 'Apple';
+            break;
+        case 'mamão':
+            fruitImg = '<img src=imagens/mamao.jpg width=200px>';
+            fruintEng = 'Papaya';
+            break;
+        case 'manga':
+            fruitImg = '<img src=imagens/manga.jpg width=200px>';
+            fruintEng = 'Mango';
+            break;
+        case 'melancia':
+            fruitImg = '<img src=imagens/melancia.jpg width=200px>';
+            fruintEng = 'Watermelon';
+        case 'melão':
+            fruitImg = '<img src=imagens/melao.jpg width=200px>';
+            fruintEng = 'Cantaloupe';
+            break;
+        case 'morango':
+            fruitImg = '<img src=imagens/morango.jpg width=200px>';
+            fruintEng = 'Strawberry';
+            break;
+        case 'pera':
+            fruitImg = '<img src=imagens/pera.jpg width=200px>';
+            fruintEng = 'Pear';
+            break;
+        case 'tangerina':
+            fruitImg = '<img src=imagens/tangerina.jpg width=200px>';
+            fruintEng = 'Tangerine';
+            break;
+        case 'uva':
+            fruitImg = '<img src=imagens/morango.jpg width=200px>';
+            fruintEng = 'Grape';
+            break;
+        default:
+            fruitImg = '<img src=imagens/caixa.jpg width=200px>';
+            fruintEng = 'Não esta na minha lista ou esta digitado errado';
+    }
+
+    document.write('Nome da fruta em Português: <font color=blue><b>' + fruta + '</font></b>');
+    document.write('<br>' + fruitImg);
+    document.write('<br>Nome da fruta em Inglês: <font color=red><b>' + fruintEng + '</font></b>')
+
+</script>
