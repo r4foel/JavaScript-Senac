@@ -1,0 +1,22 @@
+<script>
+function calcularIdade(anoNascimento) {
+
+// Obtém o ano atual
+let anoAtual = new Date().getFullYear();
+
+// Calcula a idade subtraindo o ano de nascimento do ano atual
+let idade = anoAtual - anoNascimento;
+
+return idade;
+
+}
+
+// Permitindo o usuario entrar com o argumento
+let anoNascimento = prompt('Digite o ano de nascimento','');
+//Chama a função calcularIdade com o ano de nascimento
+let idadeDaPessoa = calcularIdade(anoNascimento);
+// Exibe a idade calculada no console
+document.write('A idade da pessoa é: ' + idadeDaPessoa + ' anos');
+
+
+</script>
