@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 25 - Callback</title>
+</head>
+<body>
+
+    <head>
+<h1>Fundo de Callback em JavaScript</h1>
+    </head>
+    
+    <button id="meuBotao" onclick='fundoVermelho()'>Alterar o fundo para vermelho</button>
+    <button id="meuBotao" onclick='fundoBranco()'>Alterar o fundo para branco</button>
+    <button id="meuBotao" onclick='mostrarMensagem()'>Mensagem no alert</button>
+    <button id="meuBotao" onclick='mostrarTexto()'>Mensagem na pagina</button>
+
+
+    <script>
+
+        function fundoVermelho() {
+            document.bgColor = 'red';
+        }
+
+        function fundoBranco() {
+            document.bgColor = 'white';
+        }
+        
+function mostrarMensagem(){
+    alert('Que aula show! \n O Cris é D+')
+}
+
+function mostrarTexto(){
+    document.write('<h1>Adoro JavaScript <3')
+}
+
+
+        </script>
+
+
+</body>
+</html>
