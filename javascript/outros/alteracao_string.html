@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Retorna o cumprimento de uma string</title>
+
+</head>
+
+<body>
+
+   
+
+    <!-- propriedade length -->
+
+ 
+
+    <script>
+
+ 
+
+    //  Conta a quantidade de caracteres
+
+ 
+
+     console.log ('Cristiano Maia' .length);
+
+     console.log ('Camila Rocha de Andrade ' .length);
+
+ 
+
+    //Retorna o caractere em índice especificado
+
+    //propriedade charAt
+
+ 
+
+   console.log ('Cristiano Maia'.charAt(10));
+
+ 
+
+   console.log ('Camila Rocha de Andrade' .charAt (5));
+
+ 
+
+   
+
+ 
+
+   let nome = 'Cristiano Maia';
+
+ 
+
+   document.write ('<br>');
+   
+
+   //Retorna a posição do caractere em relação ao índice
+
+   //extrai um número de caracteres de uma string de acordo com posição inicial e a quantidade de caracteres
+
+   //propriedade substr (inicio, numero de caracteres)
+
+ 
+
+   console.log (nome.substr(0,4));
+
+ 
+
+   //propriedade indexOf
+
+ 
+
+   document.write (nome.indexOf ('M'));
+
+ 
+
+   document.write ('<br>');
+
+ 
+
+    //realiza a substituição do conteúdo de uma string    
+
+   // propriedade replace
+
+ 
+
+   document.write (nome.replace ('Maia', 'Silva'));
+
+   document.write ('<br>');
+
+ 
+
+   //converte uma string para letra maiúscula    
+
+   //propriedade toUpperCase
+
+ 
+
+   document.write (nome.toUpperCase ());
+
+   document.write ('<br>');
+
+ 
+
+   //Converte uma string para letra minúscula    
+
+   //propriedade toLowerCase
+
+ 
+
+   document.write (nome.toLowerCase ());
+
+ 
+
+   //Remove os espaços do inicio e final de uma string
+
+ 
+
+   document.write ('<br>');
+
+   let texto = 'Aula JavaScript ';
+
+ 
+
+   // propriedade trim remove os espaços do inicio e final de uma string 
+
+ 
+
+   document.write ('=' + texto + '= <br>');
+
+   document.write ('=' + texto.trim()+ '=<br>');
+
+ 
+
+   // Arredondar valor para cima
+
+ 
+
+   document.write ('<br>');
+
+ 
+
+   let numero = 10.35978;
+
+   document.write (numero + '<br>');
+
+   document.write (Math.ceil (numero) + '<br>');
+
+
+//
+
+ document.write(Math.round(10.5) + '<br>');
+ document.write(Math.round(10.4) + '<br>');
+
+
+ //FORNECENDO UM NUMERO ALEATORIO ENTRE 0 E 1
+
+let x = Math.random();
+document.write('<br>' + x);
+
+//new Date () faz com que um objeto de data seja criado e atribuido a uma variavel
+
+document.write('<br>');
+
+let data = new Date();
+
+// retorna o dia da seman da data atual iniciando em 0
+
+document.write('Dia de semana: ' + data.getDay() + '<br>');
+
+// retorna o dia no mes da data atual
+
+document.write('Dia no mês: ' + data.getDate() + '<br>');
+
+//retorna com o mês em numero iniciando por 0
+//sem incremento
+document.write('Mês: ' + data.getMonth() + '<br>');
+//com incrimento
+document.write('Mês: ' + (data.getMonth() +1)+ '<br>')
+
+// retorna o ano completo
+document.write('Ano: ' + data.getFullYear() + '<br>');
+
+
+</script>
+
+   
+
+</body>
+
+</html>

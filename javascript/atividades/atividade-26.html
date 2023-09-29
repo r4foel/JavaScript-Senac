@@ -1,0 +1,58 @@
+<!-- Enunciado: Calculadora simples 
+Crie um programa que leia dois numeros inteiros e qual operação deseja fazer com os numeros (soma, subtração, multiplicação ou divisão). No final exibir os numeros digitados, a operação escolhida e o resultado. -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 26</title>
+<script>
+
+let numero1 = parseInt(prompt('Digite um numero: ','')) 
+
+let numero2 = parseInt(prompt('Digite um numero: ','')) 
+
+let calculo = prompt('Digite o sinal operação para calculos os numeros (soma, subtração, multiplicação ou divisão','');
+
+let resultado;
+let conta;
+
+
+switch (calculo) {
+case '+':
+conta = 'Soma'
+resultado = numero1 + numero2
+break
+
+case '-':
+    conta = 'Subtração'
+    resultado = numero1 - numero2
+break
+
+case '*':
+    conta = 'Multiplicação'
+    resultado = numero1 * numero2
+break
+
+case '/':
+    conta = 'Divisão'
+    resultado = numero1 / numero2
+break
+
+default:
+    conta= 'Parece que você digitou algo errado'
+    resultado = 'Você precisa escolher uma operação válida'
+}
+
+document.write('Primeiro valor: ' + numero1 + '<br>');
+document.write('Segundo valor: ' + numero2 + '<br>');
+document.write('Operação escolhida: ' + conta + '<br>')
+document.write('Resultado: ' + resultado + '<br>')
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>
