@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora simples 2</title>
+</head>
+<body>
+    
+
+    <h1>Calculadora Simples 2</h1>
+
+<!-- Campo de entrada para os numeros -->
+
+<input type="text" id='numero1' placeholder='Número 1'>
+<input type="text" id='numero2' placeholder='Número 2'>
+<button onclick='calcularOperacoes()'>Calcular</button>
+
+
+<!-- Local onde o resultado será exibido -->
+
+<p>Resultado:</p>
+<div id='resultado'></div>
+
+<script>
+
+function calcularOperacoes() {
+
+    //Obter os valores dos campos de texto e converter em numeros
+    //getElementByID esta chamando o elemento dentro das ().value
+let num1 = parseFloat(document.getElementById('numero1').value);
+let num2 = parseFloat(document.getElementById('numero2').value);
+
+//Verificar se os valores são válidos (números)
+if (parseFloat(num1) && parseFloat(num2)) {
+
+    //Calcular as operações
+let soma = num1 + num2;
+let subtracao = num1 - num2;
+let multiplicacao = num1 * num2;
+let divisao = num1 / num2;
+
+//Construir uma string com os resultados
+let resultados = 'Soma: ' + soma + '<br>';
+resultados += 'Subtração: ' + subtracao + '<br>';
+resultados += 'Multiplicação: ' + multiplicacao + '<br>'
+resultados += 'Divisão: ' + divisao;
+
+
+// Exibir os resultados na div de resultado
+document.getElementById('resultado').innerHTML = resultados;
+} else {
+//Se um dos valores não for valido, exibir uma mensagem de erro
+document.getElementByID('resultado').innerHTML = 'Entrada Inválida';
+
+}
+
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simples 03</title>
+</head>
+
+<body>
+
+    <h1>Claculadora Simples 03</h1>
+
+    <!-- Campos de entrada para n1 e n2 -->
+    <input type="text" id="numero1" placeholder="primeiro valor"><br>
+    <input type="text" id="numero2" placeholder="segundo valor"><br><br>
+
+    <!-- Botões de operação -->
+    <button onclick="calcular('+')">+</button>
+    <button onclick="calcular('-')">-</button>
+    <button onclick="calcular('*')">*</button>
+    <button onclick="calcular('/')">/</button>
+    <br><br>
+
+    <!-- Resultado -->
+    <input type="text" id="resultado" placeholder="Resultado">
+
+    <script>
+
+        // Função para calcular a operação selecionada
+        function calcular(operacao) {
+            //Obter os valores de n1 e n2 dos campos de texto
+            let num1 = parseFloat(document.getElementById("numero1").value);
+            let num2 = parseFloat(document.getElementById("numero2").value);
+
+            //Verificar se os valores são válidos (números)
+            if (parseFloat(num1) && parseFloat(num2)) {
+                let resultado;
+
+                 //Realizar a operação com base na escolha
+            switch (operacao) {
+                case '+':
+                    resultado = num1 + num2;
+                    break;
+                case '-':
+                    resultado = num1 - num2;
+                    break;
+                case '*':
+                    resultado = num1 * num2;
+                    break;
+                case '/':
+                    if (num2 !== 0) {
+                        resultado = num1 / num2;
+                    } else {
+                        resultado = "Divisão por zero!";
+                    }
+                    break;
+                default:
+                    resultado = "Operação Inválida";
+
+            }
+
+
+                //Exibir o resultado na caixa de texto
+                document.getElementById("resultado").value = resultado;
+            } else {
+                //Se um dos valores não for valido, exibir uma mensagem de erro
+                document.getElementById("resultado").value = 'Entrada Inválida';
+            }
+
+           
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
