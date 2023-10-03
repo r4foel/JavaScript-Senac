@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ligar/Desligar a lâmpada</title>
+</head>
+
+<body>
+
+   
+
+
+    <div class="lampada">
+        <img src="imagens/desligar.png" alt="lampada">
+    </div>
+
+
+
+    <input type="radio" name="ligar" id="On" onclick="lampadaOn()">Ligar
+    <!-- <label for="On">Ligar</label> -->
+    <br>
+
+    <input type="radio" name="desligar" id="desligar" onclick="lampadaOff()">Desligar
+    <!-- <label for="desligar">Desligar</label> -->
+
+
+    <script>
+
+
+
+        function lampadaOn() {
+            document.getElementById("lampada").src = "imagens/ligar.png";
+        }
+
+        function lampadaOff() {
+            document.getElementById("lampada").src = "imagens/desligar.png";
+        }
+
+
+    </script>
+
+</body>
+
+</html>
