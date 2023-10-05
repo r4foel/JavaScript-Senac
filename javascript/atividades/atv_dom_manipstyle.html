@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando Classes</title>
+</head>
+
+<body>
+
+    <style>
+        .estilo1 {
+            background-color: yellow;
+            color: black;
+            font-size: 20px;
+            padding-left: 5px;
+
+        }
+
+        .estilo2 {
+            width: 600px;
+            height: 300px;
+            background-color: #ff0000;
+            text-align: center;
+            font-size: 25px;
+            color: #FFF;
+            padding: 10px;
+
+        }
+    </style>
+
+<script>
+function modificarClasse() {
+    document.getElementById('texto').className = 'estilo2';
+}
+
+function modificarClasse1() {
+    document.getElementById('texto').className = 'estilo1';
+}
+
+
+</script>
+
+
+
+<div id="texto" class="estilo1">
+<h2>Modificando Classe</h2>
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed animi neque, natus atque dicta voluptatum architecto error nulla provident aliquam delectus modi debitis, voluptatibus inventore suscipit non exercitationem asperiores nemo.
+</div>
+<hr>
+<button type="button" onclick="modificarClasse()">Modificar Classe</button>
+
+<button type="button" onclick="modificarClasse1()">Voltar a Classe </button>
+
+
+
+</body>
+
+</html>
