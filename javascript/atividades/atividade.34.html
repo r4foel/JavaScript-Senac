@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 34</title>
+</head>
+
+<body>
+
+    <body>
+
+        <style>
+            #container {
+                width: 310px;
+                height: 220px;
+                border: 1px solid black;
+                border-radius: 20px;
+                padding: 10px;
+                display: inline-block;
+                align-items: center;
+                justify-content: center;
+            }
+            .div_texto1 {
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                background-color: black;
+                color: white;
+                height: 40px;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                width: 310px;
+                border-radius: 20px;
+            }
+            .div_texto2 {
+                font-weight: bold;
+                padding: 10px;
+                font-size: 20px;
+            }
+            .caixa_texto {
+                height: 40px;
+                width: 280px;
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                border-radius: 10px;
+                border: 0px;
+                margin-left: 12px;
+                box-shadow: 2px 2px 5px #383636;
+                background-color: rgb(255, 241, 223);
+            }
+            #area2 {
+                display: inline-block;
+                width: 310px;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+                text-align: center;
+            }
+            .btn {
+                background-color: black;
+                color: white;
+                height: 30px;
+                width: 120px;
+                margin: 2px;
+                border-radius: 10px;
+            }
+            .btn:hover {
+                background-color: #302f2f;
+            }
+        </style>
+
+        <div id="container">
+            <div class="div_texto1"> Manipulação de DOM com JavaScrip</div>
+            <div class="div_texto2">Contador:</div>
+            <div><input disabled="disabled" class="caixa_texto" type="number" id="contador" value="0" ></div>
+
+            <div id="area2">
+                <button class="btn" id="incrementar" onclick="incrementarContador()">Incrementar</button>
+                <button class="btn" id="decrementar" onclick="decrementarContador()">Decrementar</button>
+            </div>
+
+            <div class="div_texto2">Desenvolvedor: Your Name</div>
+        </div>
+
+        <script>
+            // Função para incrementar o contador
+            function incrementarContador() {
+                // Obtém o valor atual da caixa de texto, converte para número e incrementa
+                let contadorInput = document.getElementById('contador');
+                let valorAtual = parseInt(contadorInput.value);
+                valorAtual++;
+                contadorInput.value = valorAtual;
+            }
+
+            // Função para decrementar o contador
+            function decrementarContador() {
+                // Obtém o valor atual da caixa de texto, converte para número e decrementa
+                let contadorInput = document.getElementById('contador');
+                let valorAtual = parseInt(contadorInput.value);
+                valorAtual--;
+                contadorInput.value = valorAtual;
+            }
+
+        </script>
+
+
+    </body>
+
+</html>
