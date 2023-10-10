@@ -1,0 +1,27 @@
+<!-- Crie um programa que armazeze uma senha definida por você e sikucute ai usuário digitar a senha, enquanto a senha digitada for diferente da sua senha o programa deverá continuar solicitando, caso seja a senha correta deverá imprimir na pagina que a senha esta correta -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 39</title>
+</head>
+<body>
+        <script>
+    
+            let pergunta=prompt('Digite a senha:','');
+            let senha = 'Tito Gym';
+    
+            while(pergunta != senha){
+                alert('Você esta errado, tente de novo');
+                pergunta=prompt('Digite a senha:','');
+            }
+    
+    document.write('Parabéns, já pode entrar');
+    
+    </script>
+    
+</body>
+</html>
