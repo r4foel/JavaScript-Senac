@@ -1,19 +1,25 @@
 body {
-    background-color: #ebe7e0;
-    font: 13pt Arial;
+    background-color: #0f2607;
+    font: 13pt Helvetica;
+    color: rgb(203, 201, 201);
 }
 
 main {
-    background-color: white;
+    background-color: black;
     width: 800px;
     padding: 20px;
     margin: auto;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.529);
 }
 
 h1 {
-    color: rgb(0, 0, 0);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.exerc:hover{
+    transform: scale(1.1);
 }
 
 .titulo-2{
@@ -21,18 +27,20 @@ h1 {
 }
 
 h2 {
-    color: darkgoldenrod;
+    color: rgb(255, 255, 255);
 }
 
 aside {
     display: block; 
     font-size: 10pt;
+   
     text-align: justify;
-    background-color: #44749d;
-    padding: 10px;
-    border-radius: 10px;
+    background-color: #295c15;
+    padding: 20px;
+    
     margin-bottom: 10px;
 }
+
 
 aside img {
     width: 60px; 
@@ -42,11 +50,12 @@ aside img {
 }
 
 a, a:visited {
-    color: rgb(34, 34, 34);
+    color: rgb(211, 210, 210);
     font-weight: bolder;
 }
 
 a:hover {
-    color: darkgoldenrod;
+    color: #295c15;
     text-decoration: none;
+    transform: scale(2.0);
 }

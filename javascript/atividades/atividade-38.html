@@ -7,53 +7,35 @@
 </head>
 <body>
 <style>
-/* body{
-    margin: 0;
+
+h1{
     display: block;
 }
 
 
-#professor{
-    
-    text-align: center;
-    width: 255px;
-    height: 315px;
-  display: none;
+main{
+    display: flex;
 }
-
-#professor p{
-    background-color: gray;
-    text-align: center;
-}
-
-#professor img{
-    justify-content: center;
-align-items: center;
-    width: 200px;
-    height: 206px;
-}
-
-#professor ul{
-    background-color: gray;
-    text-align: center;
-} */
-
-
 
 </style>
+
+
+
+
 <h1>Estrutura de repetição</h1>   
 
-
-
+<main>
+<div id="x"></div>
+</main>
 
     <script>
      let x =Number(1); 
      let numero=Number(prompt('Digite um Numero',''));
      
      while (x <= numero){
-        document.write('<tr><td bgcolor=#gray><3 </td><td>' + x + '</td></tr>');
-        document.write('<tr><td bgcolor=#ccc>E-mail:</td><td>' + '</td></tr>');
-        document.write('<tr><td bgcolor=#ccc>Telefone:</td><td>' +'</td></tr>');
+        document.write('<table width=200><tr align=center bgcolor=gray><td colspan=2>' + '&#129505 ' + x + ' &#129505' + '</tr> <tr align=center bgcolor=gray><td colspan=2><img src="imagens/professor.png"></tr><tr align=center bgcolor=gray><td colspan=2>' + '&#128525 &#128525 &#128525'  + '</tr>');
+        // document.write('<table width=200><tr align=center bgcolor=gray><td colspan=2><img src="imagens/professor.png"></tr>');
+        // document.write('<table width=200><tr align=center bgcolor=gray><td colspan=2>' + '&#128525 &#128525 &#128525'  + '</tr>');
         
         x++
      }
