@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   
+
+
+
+    <script>
+        function consultarCEP() {
+            var cep = document.getElementById('cep').value;
+
+            //verifica se o CEP possui apenas números - regex
+            if (!cep.match(/^[-0-9]+$/)) {
+                alert('O CEP deve conter apenas números.');
+                return;
+            }
+
+
+            //Consulta o CEP no ViaCEP
+            $.getJSON('https://viacep.com.br/ws/' + cep + '/json/', function (data) {
+                if (!data.erro) {
+                    document.getElementById('logradouro').value = data.logradouro;
+                    document.getElementById('bairro').value = data.bairro;
+                    document.getElementById('cidade').value = data.localidade;
+                    document.getElementById('estado').value = data.uf;
+                } else {
+                    alert('CEP não encontrado.');
+                }
+
+            });
+        }
+    </script>
+
+<div>
+
+<div>
+   <label for="nome">Nome/Razão Social: (Obrigatório)</label>
+    <input type="text" name="nome" id="nome">
+</div>
+
+<div>
+    <label for="nome">CPF/CNPJ: </label>
+     <input class="cpfOuCnpj" value="11111111111" type="text">
+ </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.js"></script>
+ <script type="text/javascript">
+    var options = {
+onKeyPress: function (cpf, ev, el, op) {
+    var masks = ['000.000.000-000', '00.000.000/0000-00'];
+    $('.cpfOuCnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+}
+}
+
+$('.cpfOuCnpj').length > 11 ? $('.cpfOuCnpj').mask('00.000.000/0000-00', options) : $('.cpfOuCnpj').mask('000.000.000-00#', options);
+</script>
+ <div>
+    <label for="cep">CEP: </label>
+    <input type="text" id="cep" name="cep" maxlength="9" onblur="consultarCEP()" required>
+
+
+</div>
+
+<div class="col-md-4">
+    <label for="logradouro">Logradouro: </label>
+    <input type="text" id="logradouro" name="logradouro">
+</div>
+
+<div>
+    <label for="bairro">Bairro: </label>
+    <input type="text" name="bairro" id="bairro">
+</div>
+
+
+<div>
+    <label for="cidade">Cidade: </label>
+    <input type="text" name="cidade" id="cidade">
+</div>
+
+
+<div>
+    <label for="estado">Estado: </label>
+    <input type="text" name="estado" id="estado">
+</div>
+
+<div>
+    <label for="telefone">Telefone Fixo: </label>
+    <input type="text" name="telefone" id="telefone">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script>
+    // Aplica a máscara ao campo de telefone
+    $(document).ready(function(){
+        $('#telefone').inputmask('(00) 0000-0000');
+    });
+</script>
+
+<div>
+    <label for="celular">Celular: </label>
+    <input type="text" name="celular" id="celular">
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+<script>
+    // Aplica a máscara ao campo de telefone
+    $(document).ready(function(){
+        $('#celular').inputmask('(00) 00000-0000');
+    });
+</script>
+
+ <div>
+    <label for="nome">Data de Aniversário/Inauguração: </label>
+     <input type="number" name="nome" id="cidade">
+ </div>
+
+
+ <div>
+    <label for="nome">Enviar e-mail: (sim/não usar select)</label>
+     <input type="text" name="nome" id="cidade">
+ </div>
+
+ <div>
+    <label for="nome">Renda/Faturamento:   </label>
+     <input type="number" name="nome" id="cidade">
+ </div>
+
+
+ <div>
+    <label for="nome">Observações:  </label>
+     <textarea></textarea> 
+ </div>
+
+</div>
+
+</body>
+
+<script>
+    $(document).ready(function(){
+    var $campo = $("#cep");
+    $campo.mask('00000-000', {reverse: true});
+    });
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.js"></script>
+</html>

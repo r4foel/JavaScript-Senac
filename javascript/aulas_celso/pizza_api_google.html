@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Disciplinas', 'Carga Horaria'],
+          ['Html',     36],
+          ['CSS',      36],
+          ['Javascript',  50],
+          ['Banco de Dados', 40],
+          ['PHP',    60]
+        ]);
+
+        var options = {
+          title: 'Tecnico Informatica para Internet',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body onLoad="self.print();">
+    <center>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    </center>
+  </body>
+</html>

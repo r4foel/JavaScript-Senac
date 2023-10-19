@@ -1,0 +1,26 @@
+<!-- 
+   Para baixar o JS
+   https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js 
+   Fonte: https://www.mundojs.com.br/2018/01/16/crie-codigo-de-barras-em-javascript-com-jsbarcode/
+-->
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <script>
+            function GerarCódigoDeBarras(elementoInput){
+                /*A função JsBarcode não aceita string vazia*/
+                if(!elementoInput.value){
+                    elementoInput.value = 0;
+                }
+                JsBarcode('#codBarras', elementoInput.value);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Digite um valor</label>
+            <input type="text" onblur="GerarCódigoDeBarras(this)"/>
+        </div>
+        <svg id="codBarras"></svg>
+    </body>    
+</html>
