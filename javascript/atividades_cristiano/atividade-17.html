@@ -1,0 +1,32 @@
+<!-- Enunciado: Valor de venda​
+
+Crie um programa que receba o preço de custo de um produto e mostre o valor de venda. Sabe-se que o preço de custo receberá um  acréscimo de acordo com um percentual informado pelo usuário.​
+
+​
+
+Saida:​ -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor de Venda</title>
+</head>
+<body>
+    <script>
+        let valorProduto = parseFloat (prompt ('Digite o valor do produto: ', ''));
+        let percentual = parseFloat ( prompt ('Digite o percentual de acrésimo do produto (apenas números)', ''));
+        let total = parseFloat ( valorProduto + (valorProduto * (percentual / 100))); 
+        let lucro = parseFloat ( valorProduto * (percentual / 100));
+
+        document.write ('Valor de custo: <b>' + valorProduto + '.00</b><br>' );
+        document.write ('Percentual de venda: <b>' + percentual + '% </b><br>');
+        document.write ('Valor de venda: <b> ' + total + '.00 </b><br>');
+        document.write ('Lucro: <font color=red><b> R$' + lucro + '.00 </b></font>' );
+        </script>
+    
+</body>
+</html>
+

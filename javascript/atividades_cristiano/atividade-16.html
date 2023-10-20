@@ -1,0 +1,33 @@
+<!-- Enunciado: Boletim escolar​
+
+Crie um programa que leia o nome do aluno e 4 notas, no final exibir o nome do aluno as quatro notas, a média e se a média for maior ou igual a 7,0 aprovado caso contrário reprovado.​ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Escolar</title>
+</head>
+<body>
+    <script>
+
+        let nome=  (prompt ('Digite o seu nome: ', ''));
+        let nota1 = parseFloat( prompt ('Digite a primeira nota: ',''));
+        let nota2 = parseFloat ( prompt ('Digite a segunda nota: ',''));
+        let nota3 = parseFloat (prompt ('Digite a terceira nota: ',''));
+        let nota4 = parseFloat (prompt ('Digite a quarta nota: ',''));
+        let resultado = parseFloat ((nota1 + nota2 + nota3 + nota4) /4);
+
+        document.write ('Aluno: ' + nome +'<br> 1a Nota: ' + nota1 +'<br> 2a Nota: ' + nota2 + '<br> 3a Nota: '+ nota3 + '<br> 4a Nota: '+ nota4 + '<br> Média: ' + resultado);
+
+        if ( resultado >= 7)  
+            document.write('<br> Situação: Aprovado'); else {
+            document.write('<br>Situação: Reprovado');            
+        }
+
+   
+    </script>
+    
+</body>
+</html>

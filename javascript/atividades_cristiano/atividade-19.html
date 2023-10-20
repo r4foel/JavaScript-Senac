@@ -1,0 +1,141 @@
+<!-- Crie um quiz com no mínimo 5 perguntas e 4 alternativas para cada pergunta​
+Solicitar ao usuário escolher a alternativa correta e no final de todas as questões, exibir a alternativa correta, a alternativa escolhida e a soma dos acertos. -->
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sobre animais!</title>
+</head>
+
+<body>
+
+    <script>
+
+        alert('Seja bem-vindo!\n Responda as questões com o NÚMERO da alternativa CORRETA');
+
+        let pergunta1 = prompt('Qual o felino mais rápido do mundo? \n 1- Guepardo \n 2- Leopardo \n 3- Gato \n 4- Tigre');
+        let resCorreta1 = 1
+        let soma = 0
+
+        if (pergunta1 == resCorreta1) {
+            soma = soma + 1
+
+        }
+
+        let pergunta2 = prompt('Quanto é o tempo de gestação de uma leoa? \n 1- 9 meses \n 2- 4 meses \n 3- 1 mês \n 4- 6 meses');
+        let resCorreta2 = 2
+
+        if (pergunta2 == resCorreta2) {
+            soma = soma + 1
+
+        }
+
+        let pergunta3 = prompt('Qual é o maior animal do mundo? \n 1- Leão \n 2- Golfinho \n 3- Baleia-azul \n 4- Elefante');
+        let resCorreta3 = 3
+
+        if (pergunta3 == resCorreta3) {
+            soma = soma + 1
+        }
+
+        let pergunta4 = prompt('Qual é a maior ave mundo? \n 1- Avestruz \n 2- Pássaro \n 3- Arara-azul \n 4- Galinha');
+        let resCorreta4 = 1
+
+        if (pergunta4 == resCorreta4) {
+            soma = soma + 1
+        }
+
+        let pergunta5 = prompt('Qual o maior réptil do mundo? \n 1- Jacaré \n 2- Crocodilo \n 3- Lagarto \n 4- Cobra');
+        let resCorreta5 = 2
+
+        if (pergunta5 == resCorreta5) {
+            soma = soma + 1
+        }
+
+        let pergunta6 = prompt('Qual é o maior felino do mundo? \n 1- Gato \n 2- Leão \n 3- Tigre \n 4- Guepardo')
+        let resCorreta6 = 3
+
+        if (pergunta6 == resCorreta6) {
+            soma = soma + 1
+        }
+
+        let pergunta7 = prompt('Qual é o maior animal terrestre? \n 1- Elefante \n 2- Rinoceronte \n 3- Leão \n 4- Baleia')
+        let resCorreta7 = 1
+
+        if (pergunta7 == resCorreta7) {
+            soma = soma + 1
+        }
+
+        let pergunta8 = prompt('Qual é o animal que mais mata humanos no mundo? \n 1- Mosquito \n 2- Cobra \n 3- Tigre \n 4- Hipopótamo')
+        let resCorreta8 = 4
+
+        if (pergunta8 == resCorreta8) {
+            soma = soma + 1
+        }
+
+        let pergunta9 = prompt('Animais onívoros comem o que? \n 1- Carne \n 2- Plantas \n 3- Tudo \n 4- Frutas')
+        let resCorreta9 = 3
+
+        if (pergunta9 == resCorreta9) {
+            soma = soma + 1
+        }
+
+        let pergunta10 = prompt('Qual animal simboliza o imposto de renda? \n 1- Leão \n 2- Onça \n 3- Tartaruga \n 4- Rinoceronte')
+        let resCorreta10 = 1
+
+        if (pergunta10 == resCorreta10) {
+            soma = soma + 1
+        }
+
+        // Pergunta1
+
+        document.write ('<h1><font color= blue> Resultado: </font></h1><br> ')
+        document.write ('Pergunta 1: <br> Qual o felino mais rápido do mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta1 + '</font></b><br> Sua resposta: <b>' + pergunta1 + '</b><hr>');
+
+        // Pergunta2
+
+        document.write ('Pergunta 2: <br> Quanto é o tempo de gestação de uma leoa?<br> Alternativa correta:<b><font color= blue> '+ resCorreta2 + '</font></b><br> Sua resposta: <b>' + pergunta2 + '</b><hr>');
+
+        // Pergunta3
+
+        document.write ('Pergunta 3: <br>Qual é o maior animal do mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta3 + '</font></b><br> Sua resposta: <b>' + pergunta3 + '</b><hr>');
+
+        // Pergunta4
+
+        document.write ('Pergunta 4: <br>Qual é a maior ave do mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta4 + '</font></b><br> Sua resposta: <b>' + pergunta4 + '</b><hr>');
+
+        // Pergunta5
+
+        document.write ('Pergunta 5: <br>Qual o maior réptil do mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta5 + '</font></b><br> Sua resposta: <b>' + pergunta5 + '</b><hr>');
+
+        // Pergunta6
+
+        document.write ('Pergunta 6: <br>Qual é o maior felino do mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta6 + '</font></b><br> Sua resposta: <b>' + pergunta6 + '</b><hr>');
+
+        // Pergunta7
+
+        document.write ('Pergunta 7: <br>Qual é o maior animal terrestre?<br> Alternativa correta:<b><font color= blue> '+ resCorreta7 + '</font></b><br> Sua resposta: <b>' + pergunta7 + '</b><hr>');
+
+        // Pergunta8
+
+        document.write ('Pergunta 8: <br>Qual é o animal que mais mata humanos no mundo?<br> Alternativa correta:<b><font color= blue> '+ resCorreta8 + '</font></b><br> Sua resposta: <b>' + pergunta8 + '</b><hr>');
+
+        // Pergunta9
+
+        document.write ('Pergunta 9: <br>Animais onívoros comem o que?<br> Alternativa correta:<b><font color= blue> '+ resCorreta9 + '</font></b><br> Sua resposta: <b>' + pergunta9 + '</b><hr>');
+
+        // Pergunta10
+
+        document.write ('Pergunta 10: <br>Qual animal simboliza o imposto de renda?<br> Alternativa correta:<b><font color= blue> '+ resCorreta10 + '</font></b><br> Sua resposta: <b>' + pergunta10 + '</b><hr>');
+
+        document.write ('Pontos: ' + soma);
+
+
+    </script>
+
+</body>
+
+</html>

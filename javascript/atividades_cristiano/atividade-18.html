@@ -1,0 +1,46 @@
+<!-- Enunciado: Consulta de Status de Tickets​
+
+Você está desenvolvendo um sistema de atendimento ao cliente para uma empresa de suporte técnico. O sistema deve receber um número de ticket de suporte e fornecer informações sobre o status desse ticket. Os possíveis status de um ticket são os seguintes:​
+
+​
+
+Aberto​
+
+Em andamento​
+
+Resolvido​
+
+Fechado -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Status de Tickets</title>
+</head>
+<body>
+
+    <script>
+        let codigo = parseInt (prompt ('Digite o código do seu atendimento', ''));
+        let status; 
+        switch (codigo) {
+            case 1:
+                status = 'Aberto';
+                break;
+            case 2:
+                status = 'Em andamento';
+                break;
+            case 3:
+                status = 'Resolvido';
+                break;
+            case 4:
+                status = 'Fechado';
+                break;
+            default:
+                status = 'Codigo inexistente, tente novamente'
+        }
+        alert(status);
+    </script>
+    
+</body>
+</html>

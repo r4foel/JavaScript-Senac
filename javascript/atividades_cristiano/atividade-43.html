@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projeto 01</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f0f0f0;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+ 
+
+        h1{
+
+            text-align: center;
+
+            margin: 20px 0;
+
+            color: #333;
+
+        }
+
+        h3{
+
+            color: #0056b3;
+
+            margin-left: 20%;
+
+        }
+
+ 
+
+        .dev{
+
+            text-align: center;
+
+            margin: 20px 0;
+
+            color: #333;  
+
+        }
+
+ 
+
+        .container {
+
+            max-width: 800px;
+
+            margin: 0 auto;
+
+            background-color: #fff;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+ 
+
+        label {
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        /* Estilo personalizado para o botão "Escolher arquivo" */
+
+        input[type="file"] {
+
+            display: none; /* Oculta o input real */
+
+        }
+
+ 
+
+        .custom-file-upload {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            margin-top: 10px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            display: inline-block;
+
+            font-weight: bold;
+
+        }
+
+ 
+
+        .custom-file-upload:hover {
+
+            background-color: #0056b3;
+
+        }
+
+ 
+
+        input[type="number"] {
+
+            width: 100px;
+
+            padding: 5px;
+
+        }
+
+ 
+
+        button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            margin-top: 10px;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+        }
+
+ 
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+ 
+
+        .imagem-de-fundo {
+
+            width: 100px;
+
+            height: 100px;
+
+            display: inline-block;
+
+            margin: 10px;
+
+            border-radius: 5px;
+
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+ 
+
+<h1>Galeria de Imagens Interativa com Upload</h1>
+
+ 
+
+<h3>Desenvolvedores: Nome / Nome</h3>
+
+ 
+
+<div class="container">
+
+    <form id="upload-form" enctype="multipart/form-data">
+
+        <label for="arquivo">Upload de Imagem:</label>
+
+        <label class="custom-file-upload">
+
+            <input type="file" name="arquivo" id="arquivo">
+
+            Escolher arquivo
+
+        </label><br><br>
+
+ 
+
+        <label for="quantidade">Quantidade de Imagens:</label>
+
+        <input type="number" name="quantidade" id="quantidade"><br><br>
+
+ 
+
+        <button type="button" onclick="adicionarImagens()">Adicionar</button>
+
+        <button type="button" onclick="resetImagens()">Resetar</button>
+
+    </form>
+
+ 
+
+    <div id="imagens-container"></div>
+
+</div>
+
+ 
+
+<script>
+
+    // Função para adicionar imagens
+
+    function adicionarImagens() {
+
+        // Obtém o elemento de entrada de arquivo e a quantidade de imagens a serem adicionadas
+
+        var arquivoInput = document.getElementById("arquivo");
+
+        var quantidadeInput = document.getElementById("quantidade");
+
+        // Obtém o contêiner onde as imagens serão exibidas
+
+        var container = document.getElementById("imagens-container");
+
+ 
+
+        // Limpa o contêiner antes de adicionar novas imagens
+
+        container.innerHTML = "";
+
+ 
+
+        // Converte o valor da quantidade para um número inteiro
+
+        var quantidade = parseInt(quantidadeInput.value);
+
+ 
+
+        // Loop para adicionar a quantidade especificada de imagens
+
+        for (var i = 0; i < quantidade; i++) {
+
+            // Cria um elemento de imagem
+
+            var imagem = document.createElement("img");
+
+            // Adiciona uma classe à imagem
+
+            imagem.classList.add("imagem-de-fundo");
+
+ 
+
+            // Verifica se um arquivo de imagem foi selecionado no elemento de entrada de arquivo
+
+            if (arquivoInput.files && arquivoInput.files[0]) {
+
+                // Obtém o arquivo selecionado
+
+                var file = arquivoInput.files[0];
+
+                // Chama a função para carregar a imagem e passa a imagem e o arquivo como argumentos
+
+                carregarImagem(imagem, file);
+
+            } else {
+
+                // Se nenhum arquivo foi selecionado, exibe um alerta
+
+                alert("Por favor, selecione um arquivo de imagem.");
+
+                return; // Sai da função
+
+            }
+
+ 
+
+            // Adiciona a imagem ao contêiner
+
+            // ele é usado para inserir um elemento HTML dentro de outro elemento HTML
+
+            container.appendChild(imagem);
+
+        }
+
+    }
+
+ 
+
+    // Função para carregar uma imagem em um elemento de imagem
+
+    function carregarImagem(imagem, file) {
+
+        // Cria um leitor de arquivo
+
+        var reader = new FileReader();
+
+ 
+
+        // Quando o arquivo é carregado com sucesso
+
+        reader.onload = function(e) {
+
+            // Define o atributo src da imagem com os dados da imagem carregada
+
+            imagem.src = e.target.result;
+
+        };
+
+ 
+
+        // Lê o arquivo como uma URL de dados (Data URL)
+
+        reader.readAsDataURL(file);
+
+    }
+
+ 
+
+    // Função para redefinir (limpar) as imagens no contêiner
+
+    function resetImagens() {
+
+        // Limpa o contêiner de imagens
+
+        document.getElementById("imagens-container").innerHTML = "";
+
+    }
+
+</script>
+
+ 
+
+ 
+
+</body>
+
+</html>

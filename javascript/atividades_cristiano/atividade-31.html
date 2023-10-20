@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elabora um programa utilizando os seguintes eventos de mouse:</title>
+</head>
+<body>
+
+    <!-- Elabore um programa utilizando os seguintes eventos de mouse:
+    onclick, ondblclick, onmouseover, onmouseover, onmouseout, onmouseup -->
+
+    <style>
+        #circulo {
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            background-color: rgb(202, 130, 142);
+            text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            
+        }
+    </style>
+
+    <div id="circulo"
+        onmouseup="mudarCor('red')"
+         ondblclick="mudarCor('gray')"
+         onmouseover="mudarCor('black')"
+         onmouseout="mudarCor('orange')"
+         onclick="voltarCor('rgb(202, 130, 142)')" >
+         
+       <p> PASSE O MOUSE E CLIQUE PARA VER O QUE ACONTECE! </p>
+    </div>
+
+    <script>
+        function mudarCor(cor) {
+            document.getElementById('circulo').style.backgroundColor = cor;
+        }
+
+        function voltarCor(corInicial) {
+            document.getElementById('circulo').style.backgroundColor = corInicial;
+        }
+    </script>
+</body>
+</html>
+    
+</body>
+</html>

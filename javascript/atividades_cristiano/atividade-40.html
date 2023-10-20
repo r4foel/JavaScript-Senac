@@ -1,0 +1,84 @@
+<!-- Um campo de texto que receba o valor do salário de um funcionário, sabendo-se que esse funcionário trabalha 30 dias por mês, totalizando 220 horas mensais, 44 horas semanais e 8 horas diárias e tem desconto de 6% de vale transporte,crie o cálculo de acordo com o modelo abaixo:
+salario mes: _____ calcular
+salario dia: ______
+salario hora:______
+desconto v.t: ________ -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+</head>
+<body>
+    <style>
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20em;
+        }
+
+        .horas, .minutos, .segundos {
+            border: 1px solid #817979;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 100px;
+            color: white;
+            background-color: #e19cb1;
+            margin: 20px;
+        }
+
+        .pontos {
+            font-size: 100px;
+            color: #817979;
+        }
+
+    </style>
+    
+    <div id="container">
+
+        <span id="horas" class="horas">00</span>
+        <span class="pontos">:</span>
+        <span id="minutos" class="minutos">00</span>
+        <span class="pontos">:</span>
+        <span id="segundos" class="segundos">00</span>
+
+    </div>
+
+    <script>
+
+        const horas = document.getElementById('horas');
+        const minutos = document.getElementById('minutos');
+        const segundos = document.getElementById('segundos');
+    
+       
+    
+        const relogio = setInterval(function time() {
+            let dateToday = new Date();
+            let hr = dateToday.getHours();
+            let min = dateToday.getMinutes();
+            let s = dateToday.getSeconds();
+    
+       
+    
+            if (hr < 10) hr = '0' + hr;
+            if (min < 10) min = '0' + min;
+             if (s < 10) s = '0' + s;
+    
+       
+    
+            horas.textContent = hr;
+            minutos.textContent = min;
+            segundos.textContent = s;
+    
+        })
+    
+    </script>
+    
+   
+
+</body>
+</html>
